@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Comic Detail Controller-->
         <scene sceneID="1qF-Hu-THu">
             <objects>
-                <viewController id="Q6o-HI-VGE" sceneMemberID="viewController">
+                <viewController id="Q6o-HI-VGE" customClass="ComicDetailController" customModule="comics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="awV-Z6-670">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Comics List Controller-->
         <scene sceneID="lkF-sw-Q1O">
             <objects>
-                <tableViewController id="WdK-VK-IMd" sceneMemberID="viewController">
+                <tableViewController id="WdK-VK-IMd" customClass="ComicsListController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0uW-De-KJX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
