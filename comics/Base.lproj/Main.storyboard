@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Comics Search Controller-->
+        <!--Comic Search-->
         <scene sceneID="tbb-Ui-TXj">
             <objects>
-                <viewController id="LOj-p8-Z1t" customClass="ComicsSearchController" customModule="comics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LOj-p8-Z1t" customClass="VCComicSearch" customModule="comics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mPv-OA-GTB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,6 +22,9 @@
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7Hn-8w-b3q">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="LOj-p8-Z1t" id="fb3-uO-B8t"/>
+                                        </connections>
                                     </searchBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cq1-zf-ILu">
                                         <rect key="frame" x="57" y="61" width="300" height="25.5"/>
@@ -75,6 +78,9 @@
                             </segments>
                         </segmentedControl>
                     </navigationItem>
+                    <connections>
+                        <outlet property="scSearchType" destination="zkI-7r-pSa" id="uGt-u0-OGA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JTE-YG-gWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
         </scene>
-        <!--Comic Detail Controller-->
+        <!--Comic Detail-->
         <scene sceneID="LMt-1s-clO">
             <objects>
-                <viewController id="SZv-CL-Cea" customClass="ComicDetailController" customModule="comics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SZv-CL-Cea" customClass="VCComicDetail" customModule="comics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PBR-8u-w0j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="647.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,6 +154,12 @@
                             <constraint firstItem="JVI-E1-sMY" firstAttribute="leading" secondItem="PBR-8u-w0j" secondAttribute="leadingMargin" id="z8t-Pa-DdU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ivComic" destination="JVI-E1-sMY" id="ock-ER-eON"/>
+                        <outlet property="lblDate" destination="YGX-2N-ThC" id="wTE-jE-CRy"/>
+                        <outlet property="lblDescription" destination="YRo-tG-tFf" id="R35-z1-fAI"/>
+                        <outlet property="lblTitle" destination="Az1-V7-mKN" id="wRh-np-M1n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRi-Tl-HJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

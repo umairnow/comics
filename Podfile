@@ -6,6 +6,7 @@ target 'comics' do
   use_frameworks!
 
   pod 'Moya', '~> 14.0'
+  pod 'Moya-ObjectMapper'
 
   target 'comicsTests' do
     inherit! :search_paths

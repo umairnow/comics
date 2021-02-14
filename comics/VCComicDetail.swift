@@ -1,5 +1,5 @@
 //
-//  ComicDetailController.swift
+//  VCComicDetail.swift
 //  comics
 //
 //  Created by Umair Aamir on 14/02/2021.
@@ -7,8 +7,14 @@
 
 import UIKit
 
-class ComicDetailController: UIViewController {
+class VCComicDetail: UIViewController {
 
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var ivComic: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

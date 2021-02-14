@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		240056E7EBE105DEEE63DD5C /* Pods_comics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3859EB920C98EE3557E5C1 /* Pods_comics.framework */; };
 		6AC4CE83E9B898E6CC717522 /* Pods_comicsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2AA853962074A6508AC403 /* Pods_comicsTests.framework */; };
-		800C901D25D95CD30026280D /* ComicDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C901C25D95CD30026280D /* ComicDetailController.swift */; };
+		800C901D25D95CD30026280D /* VCComicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C901C25D95CD30026280D /* VCComicDetail.swift */; };
+		800C902D25D9D6290026280D /* ComicSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C902C25D9D6290026280D /* ComicSearchInteractor.swift */; };
+		800C903225D9D6EF0026280D /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C903125D9D6EF0026280D /* Comic.swift */; };
 		8088F9A825D869270033A3F9 /* ComicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8088F9A725D869270033A3F9 /* ComicService.swift */; };
 		80CB2DBA25D7CF8800E66945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CB2DB925D7CF8800E66945 /* AppDelegate.swift */; };
 		80CB2DBC25D7CF8800E66945 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CB2DBB25D7CF8800E66945 /* SceneDelegate.swift */; };
-		80CB2DBE25D7CF8800E66945 /* ComicsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CB2DBD25D7CF8800E66945 /* ComicsSearchController.swift */; };
+		80CB2DBE25D7CF8800E66945 /* VCComicSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CB2DBD25D7CF8800E66945 /* VCComicSearch.swift */; };
 		80CB2DC125D7CF8800E66945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80CB2DBF25D7CF8800E66945 /* Main.storyboard */; };
 		80CB2DC325D7CF8A00E66945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80CB2DC225D7CF8A00E66945 /* Assets.xcassets */; };
 		80CB2DC625D7CF8A00E66945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80CB2DC425D7CF8A00E66945 /* LaunchScreen.storyboard */; };
@@ -45,12 +47,14 @@
 		5CD2E7FB280967AC77812948 /* Pods_comics_comicsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_comics_comicsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE9766970EA17197654CF01 /* Pods-comics-comicsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-comics-comicsUITests.release.xcconfig"; path = "Target Support Files/Pods-comics-comicsUITests/Pods-comics-comicsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7F2AA853962074A6508AC403 /* Pods_comicsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_comicsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		800C901C25D95CD30026280D /* ComicDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailController.swift; sourceTree = "<group>"; };
+		800C901C25D95CD30026280D /* VCComicDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCComicDetail.swift; sourceTree = "<group>"; };
+		800C902C25D9D6290026280D /* ComicSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicSearchInteractor.swift; sourceTree = "<group>"; };
+		800C903125D9D6EF0026280D /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		8088F9A725D869270033A3F9 /* ComicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicService.swift; sourceTree = "<group>"; };
 		80CB2DB625D7CF8800E66945 /* comics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = comics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80CB2DB925D7CF8800E66945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80CB2DBB25D7CF8800E66945 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		80CB2DBD25D7CF8800E66945 /* ComicsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsSearchController.swift; sourceTree = "<group>"; };
+		80CB2DBD25D7CF8800E66945 /* VCComicSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCComicSearch.swift; sourceTree = "<group>"; };
 		80CB2DC025D7CF8800E66945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80CB2DC225D7CF8A00E66945 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80CB2DC525D7CF8A00E66945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,13 +136,15 @@
 			children = (
 				80CB2DB925D7CF8800E66945 /* AppDelegate.swift */,
 				80CB2DBB25D7CF8800E66945 /* SceneDelegate.swift */,
-				80CB2DBD25D7CF8800E66945 /* ComicsSearchController.swift */,
+				80CB2DBD25D7CF8800E66945 /* VCComicSearch.swift */,
 				80CB2DBF25D7CF8800E66945 /* Main.storyboard */,
 				80CB2DC225D7CF8A00E66945 /* Assets.xcassets */,
 				80CB2DC425D7CF8A00E66945 /* LaunchScreen.storyboard */,
 				80CB2DC725D7CF8A00E66945 /* Info.plist */,
 				8088F9A725D869270033A3F9 /* ComicService.swift */,
-				800C901C25D95CD30026280D /* ComicDetailController.swift */,
+				800C901C25D95CD30026280D /* VCComicDetail.swift */,
+				800C902C25D9D6290026280D /* ComicSearchInteractor.swift */,
+				800C903125D9D6EF0026280D /* Comic.swift */,
 			);
 			path = comics;
 			sourceTree = "<group>";
@@ -413,8 +419,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8088F9A825D869270033A3F9 /* ComicService.swift in Sources */,
-				80CB2DBE25D7CF8800E66945 /* ComicsSearchController.swift in Sources */,
-				800C901D25D95CD30026280D /* ComicDetailController.swift in Sources */,
+				80CB2DBE25D7CF8800E66945 /* VCComicSearch.swift in Sources */,
+				800C903225D9D6EF0026280D /* Comic.swift in Sources */,
+				800C902D25D9D6290026280D /* ComicSearchInteractor.swift in Sources */,
+				800C901D25D95CD30026280D /* VCComicDetail.swift in Sources */,
 				80CB2DBA25D7CF8800E66945 /* AppDelegate.swift in Sources */,
 				80CB2DBC25D7CF8800E66945 /* SceneDelegate.swift in Sources */,
 			);
