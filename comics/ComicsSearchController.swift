@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ComicsSearchController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
