@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Comic Detail Controller-->
         <scene sceneID="LMt-1s-clO">
             <objects>
-                <viewController id="SZv-CL-Cea" sceneMemberID="viewController">
+                <viewController id="SZv-CL-Cea" customClass="ComicDetailController" customModule="comics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PBR-8u-w0j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="647.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
