@@ -20,6 +20,12 @@ struct Comic: Mappable {
     var title: String!
     var day: String!
 
+    var date: String! {
+        get {
+            day + "/" + month + "/" + year
+        }
+    }
+
     // MARK: JSON
     init?(map: Map) { }
 

@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import AlamofireImage
+
+protocol ComicDetailView {
+    func refreshView(comic: Comic?)
+}
 
 class VCComicDetail: UIViewController {
 
@@ -32,4 +37,20 @@ class VCComicDetail: UIViewController {
     }
     */
 
+}
+
+extension VCComicDetail: ComicDetail.View {
+    func refreshView(comic: Comic?) {
+        guard let c = comic else {
+            return
+        }
+        lblTitle.text = c.title
+        lblDate.text = c.date
+        lblDescription.text = c.alt
+        guard let url = URL(string: c.img) else {
+            return
+        }
+        ivComic.af.setImage(withURL: url)
+
+    }
 }

@@ -7,6 +7,7 @@ target 'comics' do
 
   pod 'Moya', '~> 14.0'
   pod 'Moya-ObjectMapper'
+  pod 'AlamofireImage'
 
   target 'comicsTests' do
     inherit! :search_paths
