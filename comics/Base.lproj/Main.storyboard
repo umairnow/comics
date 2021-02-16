@@ -37,7 +37,7 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Klo-aZ-ut7">
                                         <rect key="frame" x="0.0" y="106.5" width="414" height="647.5"/>
                                         <connections>
-                                            <segue destination="SZv-CL-Cea" kind="embed" id="PIu-xp-luR"/>
+                                            <segue destination="SZv-CL-Cea" kind="embed" identifier="comic_detail" id="PIu-xp-luR"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
@@ -76,9 +76,13 @@
                                 <segment title="Search By Text"/>
                                 <segment title="Search By Number"/>
                             </segments>
+                            <connections>
+                                <action selector="onSegmentedControlChanged:" destination="LOj-p8-Z1t" eventType="valueChanged" id="Wuy-3b-WKQ"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
+                        <outlet property="comicSearchBar" destination="7Hn-8w-b3q" id="ZoQ-FU-RwT"/>
                         <outlet property="scSearchType" destination="zkI-7r-pSa" id="uGt-u0-OGA"/>
                     </connections>
                 </viewController>

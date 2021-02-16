@@ -9,6 +9,8 @@ import Foundation
 
 protocol ComicDetailInteractorInput {
     func getCurrentComic()
+    func searchComicByText(text: String)
+    func searchComicByNumber(number: String)
 }
 
 class ComicDetailInteractor {
@@ -17,6 +19,14 @@ class ComicDetailInteractor {
 }
 
 extension ComicDetailInteractor: ComicDetailInteractorInput {
+    func searchComicByText(text: String) {
+        // TO-DO: Call search by text api https://relevantxkcd.appspot.com/process?action=xkcd&query=english
+    }
+    
+    func searchComicByNumber(number: String) {
+        // TO-DO: Call search by number api http://xkcd.com/614/info.0.json
+    }
+    
     func getCurrentComic() {
         // TO-DO: Call get current comic api http://xkcd.com/info.0.json
     }
