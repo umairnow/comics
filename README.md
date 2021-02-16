@@ -44,4 +44,8 @@ It can be changed in future.
 Interactor is responsible of parsing inputs from view controller and also parsing responses from server before
 sending to view controller. View controller can just send requests and wait for responses.
 </p>
+<p>
+`VCComicDetail` can be reused that is why it is made separate. It can be reused when there are multiple search results shown 
+in a list and user taps on a row to see the details.
+</p>
 
