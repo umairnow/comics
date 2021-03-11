@@ -8,5 +8,4 @@ enum ComicDetail {
     typealias Interactor = ComicDetailInteractor
     typealias InteractorInput = ComicDetailInteractorInput
     typealias View = ComicDetailView
-    typealias Response = ComicServiceOutput
 }

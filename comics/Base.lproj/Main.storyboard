@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CoolStoryregular.ttf">
+            <string>CoolStoryregular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Comic Search-->
         <scene sceneID="tbb-Ui-TXj">
@@ -134,6 +139,41 @@
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8va-Lf-phg" userLabel="Message View">
+                                <rect key="frame" x="20" y="44" width="374" height="603.5"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Deq-cO-Gux" userLabel="Message View Center">
+                                        <rect key="frame" x="62" y="202" width="250" height="200"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hJh-TK-boi">
+                                                <rect key="frame" x="106.5" y="81.5" width="37" height="37"/>
+                                            </activityIndicatorView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getting comics ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEa-rK-URG">
+                                                <rect key="frame" x="16" y="152.5" width="218" height="26"/>
+                                                <fontDescription key="fontDescription" name="CoolStoryregular" family="CoolStoryregular" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="bdZ-2I-dYQ"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="5K6-rs-nZ8"/>
+                                            <constraint firstAttribute="trailing" secondItem="VEa-rK-URG" secondAttribute="trailing" constant="16" id="CoD-hR-Y4k"/>
+                                            <constraint firstItem="VEa-rK-URG" firstAttribute="leading" secondItem="Deq-cO-Gux" secondAttribute="leading" constant="16" id="D8A-9k-AzM"/>
+                                            <constraint firstItem="hJh-TK-boi" firstAttribute="centerY" secondItem="Deq-cO-Gux" secondAttribute="centerY" id="dVW-L9-Ryn"/>
+                                            <constraint firstItem="hJh-TK-boi" firstAttribute="centerX" secondItem="Deq-cO-Gux" secondAttribute="centerX" id="e3g-zj-gos"/>
+                                            <constraint firstAttribute="width" constant="250" id="wtG-qb-dlg"/>
+                                            <constraint firstItem="VEa-rK-URG" firstAttribute="top" secondItem="hJh-TK-boi" secondAttribute="bottom" constant="34" id="yWy-Ky-OSz"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.50421350180697277" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Deq-cO-Gux" firstAttribute="centerY" secondItem="8va-Lf-phg" secondAttribute="centerY" id="2yd-NT-ZUy"/>
+                                    <constraint firstItem="Deq-cO-Gux" firstAttribute="centerX" secondItem="8va-Lf-phg" secondAttribute="centerX" id="76j-X5-Wyr"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRo-tG-tFf" userLabel="Description">
                                 <rect key="frame" x="20" y="51" width="354" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -144,6 +184,7 @@
                         <viewLayoutGuide key="safeArea" id="hkv-ob-s25"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="8va-Lf-phg" firstAttribute="leading" secondItem="PBR-8u-w0j" secondAttribute="leadingMargin" id="1Nh-uS-nIP"/>
                             <constraint firstItem="Az1-V7-mKN" firstAttribute="leading" secondItem="PBR-8u-w0j" secondAttribute="leading" constant="20" id="2X9-W1-Eb9"/>
                             <constraint firstItem="Az1-V7-mKN" firstAttribute="top" secondItem="PBR-8u-w0j" secondAttribute="top" constant="20" id="2lo-kH-FNC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YRo-tG-tFf" secondAttribute="trailing" constant="20" id="3cc-tV-YD6"/>
@@ -152,17 +193,23 @@
                             <constraint firstAttribute="trailingMargin" secondItem="JVI-E1-sMY" secondAttribute="trailing" id="Ezm-BB-ZcV"/>
                             <constraint firstItem="YGX-2N-ThC" firstAttribute="leading" secondItem="Az1-V7-mKN" secondAttribute="trailing" constant="10" id="J9Q-87-m48"/>
                             <constraint firstItem="JVI-E1-sMY" firstAttribute="top" secondItem="YRo-tG-tFf" secondAttribute="bottom" constant="10" id="Scj-PT-0bi"/>
+                            <constraint firstItem="8va-Lf-phg" firstAttribute="top" secondItem="PBR-8u-w0j" secondAttribute="topMargin" id="U9u-zx-ijU"/>
                             <constraint firstItem="YRo-tG-tFf" firstAttribute="top" secondItem="Az1-V7-mKN" secondAttribute="bottom" constant="10" id="eHC-HL-JLa"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="8va-Lf-phg" secondAttribute="bottom" id="gn1-GW-Cwh"/>
                             <constraint firstItem="YGX-2N-ThC" firstAttribute="bottom" secondItem="Az1-V7-mKN" secondAttribute="bottom" id="ji2-3q-HcP"/>
                             <constraint firstItem="YRo-tG-tFf" firstAttribute="leading" secondItem="hkv-ob-s25" secondAttribute="leading" constant="20" id="kSp-LR-5kB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8va-Lf-phg" secondAttribute="trailing" id="vDR-Hg-zy9"/>
                             <constraint firstItem="JVI-E1-sMY" firstAttribute="leading" secondItem="PBR-8u-w0j" secondAttribute="leadingMargin" id="z8t-Pa-DdU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="hJh-TK-boi" id="y4V-J3-He1"/>
                         <outlet property="ivComic" destination="JVI-E1-sMY" id="ock-ER-eON"/>
                         <outlet property="lblDate" destination="YGX-2N-ThC" id="wTE-jE-CRy"/>
                         <outlet property="lblDescription" destination="YRo-tG-tFf" id="R35-z1-fAI"/>
+                        <outlet property="lblMessage" destination="VEa-rK-URG" id="PaK-tC-6ed"/>
                         <outlet property="lblTitle" destination="Az1-V7-mKN" id="wRh-np-M1n"/>
+                        <outlet property="viewMessage" destination="8va-Lf-phg" id="bwb-JL-xcd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRi-Tl-HJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

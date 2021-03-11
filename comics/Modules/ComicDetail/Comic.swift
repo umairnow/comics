@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import ObjectMapper
 
-struct Comic: Mappable {
+struct Comic: Codable {
     var month: String!
     var link: String?
     var year: String!
@@ -25,20 +24,5 @@ struct Comic: Mappable {
             day + "/" + month + "/" + year
         }
     }
-
-    // MARK: JSON
-    init?(map: Map) { }
-
-    mutating func mapping(map: Map) {
-        month <- map["month"]
-        link <- map["link"]
-        year <- map["year"]
-        news <- map["news"]
-        safeTitle <- map["safeTitle"]
-        transcript <- map["transcript"]
-        alt <- map["alt"]
-        img <- map["img"]
-        title <- map["title"]
-        day <- map["day"]
-    }
 }
+
