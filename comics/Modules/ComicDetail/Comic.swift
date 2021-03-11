@@ -9,19 +9,22 @@ import Foundation
 
 struct Comic: Codable {
     var month: String!
-    var link: String?
     var year: String!
-    var news: String?
-    var safeTitle: String!
-    var transcript: String?
-    var alt: String!
+    var day: String!
+    var num: Int!
+    var alt: String! // description
     var img: String!
     var title: String!
-    var day: String!
 
     var date: String! {
         get {
             day + "/" + month + "/" + year
+        }
+    }
+    
+    var comicNumber: String! {
+        get {
+            "\(num ?? 0)"
         }
     }
 }

@@ -16,14 +16,7 @@ class VCComicSearch: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detailController = segue.destination as? VCComicDetail else {
-            return
-        }
-        interactor = detailController.interactor
-    }
-
+    
     @IBAction func onSegmentedControlChanged(_ sender: UISegmentedControl) {
         comicSearchBar.text = ""
     }
@@ -31,11 +24,15 @@ class VCComicSearch: UIViewController {
 
 extension VCComicSearch : UISearchBarDelegate {
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.comicSearchBar.resignFirstResponder()
+    }
+    
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         guard let text = searchBar.text else {
             return
         }
-        if (scSearchType.selectedSegmentIndex == 0) {
+        if (scSearchType.selectedSegmentIndex == 0 && text != "") {
             interactor?.searchComicByText(text: text)
         } else {
             interactor?.searchComicByNumber(number: text)

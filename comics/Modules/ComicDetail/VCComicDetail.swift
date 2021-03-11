@@ -10,6 +10,7 @@ import Moya
 import AlamofireImage
 
 protocol ComicDetailView {
+    func setLoadingState()
     func refreshView(comic: Comic?)
     func loadingFailed()
 }
@@ -20,6 +21,7 @@ class VCComicDetail: UIViewController {
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var lblMessage: UILabel!
+    @IBOutlet weak var lblComicNumber: UILabel!
     @IBOutlet weak var ivComic: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var viewMessage: UIView!
@@ -30,6 +32,8 @@ class VCComicDetail: UIViewController {
             switch state {
             case .ready:
                 viewMessage.isHidden = true
+                lblMessage.text = ""
+                activityIndicator.stopAnimating()
             case .loading:
                 viewMessage.isHidden = false
                 activityIndicator.startAnimating()
@@ -47,11 +51,9 @@ class VCComicDetail: UIViewController {
 
     var interactor: ComicDetail.InteractorInput?
 
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         assemble()
-        state = .loading
         interactor?.getCurrentComic()
     }
 
@@ -59,11 +61,18 @@ class VCComicDetail: UIViewController {
         let interactor = ComicDetail.Interactor()
         interactor.view = self
         self.interactor = interactor
+        let p = self.parent
+        (p as! VCComicSearch).interactor = self.interactor
     }
 
 }
 
 extension VCComicDetail: ComicDetail.View {
+    
+    func setLoadingState() {
+        self.state = .loading
+    }
+    
     func refreshView(comic: Comic?) {
         guard let c = comic else {
             return
@@ -71,11 +80,12 @@ extension VCComicDetail: ComicDetail.View {
         lblTitle.text = c.title
         lblDate.text = c.date
         lblDescription.text = c.alt
+        lblComicNumber.text = c.comicNumber
         guard let url = URL(string: c.img) else {
             return
         }
         ivComic.af.setImage(withURL: url)
-
+        self.state = .ready
     }
 
     func loadingFailed() {
@@ -86,7 +96,7 @@ extension VCComicDetail: ComicDetail.View {
 extension VCComicDetail {
     enum State {
         case loading
-        case ready([Comic])
+        case ready
         case error
     }
 }

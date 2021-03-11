@@ -8,6 +8,7 @@ target 'comics' do
   pod 'Moya', '~> 14.0'
   pod 'Moya-ObjectMapper'
   pod 'AlamofireImage'
+  pod 'TPKeyboardAvoiding', '~> 1.3'
 
   target 'comicsTests' do
     inherit! :search_paths

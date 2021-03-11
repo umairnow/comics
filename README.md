@@ -5,15 +5,11 @@ I have decided to provide following features to make MVP
 1. Show current comic
 2. Search comic by number
 3. Search comic by text
+4. Offline mode
 
 Opening the app will immediately load the current comic from API. 
 User also has option to search for a comic either by comic number or by any search query. 
 On searching, the comic will be loaded below the search bar with its details.
-
-### To-Do:
-
-* Search comic by number
-* Search comic with text
 
 ### Done:
 
@@ -24,6 +20,9 @@ On searching, the comic will be loaded below the search bar with its details.
 * Pods setup and required libraries to run the project
 * Maintained git history
 * Show current comic with description
+* Search comic by number
+* Search comic by text
+* Offline storage by url cache
 
 ### Project Structure:
 

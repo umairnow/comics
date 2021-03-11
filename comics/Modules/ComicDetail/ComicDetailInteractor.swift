@@ -22,14 +22,51 @@ class ComicDetailInteractor {
 
 extension ComicDetailInteractor: ComicDetailInteractorInput {
     func searchComicByText(text: String) {
-        // TO-DO: Call search by text api https://relevantxkcd.appspot.com/process?action=xkcd&query=english
+        view?.setLoadingState()
+        provider.request(.comicByText(text)) { [weak self] result in
+            guard let self = self else {
+                return
+            }
+            switch result {
+            case .success(let response):
+                do {
+                    // This is a temporary implementation, it should be changed to handle a a response of comic list.
+                    // Currently we are just showing first comic
+                    let plainText = try response.mapString()
+                    let comicNumbers = plainText.components(separatedBy: " ")
+                    if (comicNumbers.count > 3) {
+                        self.searchComicByNumber(number: comicNumbers[2].replacingOccurrences(of: "\n", with: "", options: NSString.CompareOptions.literal, range: nil))
+                    }
+                } catch {
+                    self.view?.loadingFailed()
+                }
+            case .failure:
+                self.view?.loadingFailed()
+            }
+        }
     }
 
     func searchComicByNumber(number: String) {
-        // TO-DO: Call search by number api http://xkcd.com/614/info.0.json
+        view?.setLoadingState()
+        provider.request(.comicByNumber(number)) { [weak self] result in
+            guard let self = self else {
+                return
+            }
+            switch result {
+            case .success(let response):
+                do {
+                    self.view?.refreshView(comic: try response.map(Comic.self))
+                } catch {
+                    self.view?.loadingFailed()
+                }
+            case .failure:
+                self.view?.loadingFailed()
+            }
+        }
     }
 
     func getCurrentComic() {
+        view?.setLoadingState()
         provider.request(.currentComic) { [weak self] result in
             guard let self = self else {
                 return
