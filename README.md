@@ -24,6 +24,14 @@ On searching, the comic will be loaded below the search bar with its details.
 * Search comic by text
 * Offline storage by url cache
 
+### User Manual
+
+* Opening the application will load current comic automatically
+* Select "Search by Text" to search comic by typing text
+* Select "Search by Number" to search comic by number
+* Tap on background or press search button on keyboard to start search
+
+
 ### Project Structure:
 
 In the project, I have modified MVVP and VIPER patterns, so that it wouldn't take

@@ -12,13 +12,16 @@ class VCComicSearch: UIViewController {
     @IBOutlet weak var scSearchType: UISegmentedControl!
     @IBOutlet weak var comicSearchBar: UISearchBar!
     var interactor: ComicDetail.InteractorInput?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func onSegmentedControlChanged(_ sender: UISegmentedControl) {
         comicSearchBar.text = ""
+        comicSearchBar.resignFirstResponder()
+        comicSearchBar.keyboardType = scSearchType.selectedSegmentIndex == 1 ? .numberPad : .default
+        comicSearchBar.becomeFirstResponder()
     }
 }
 
